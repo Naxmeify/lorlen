@@ -1,0 +1,62 @@
+{
+  "name": "lorlen",
+  "version": "0.0.1",
+  "description": "nodejs orm",
+  "main": "./lib/index.js",
+  "bin": {
+    "lorlen": "./bin/lorlen"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "commitmsg": "conventional-changelog-lint -e",
+    "precommit": "npm run lint",
+    "lint": "eslint lib test",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha test",
+    "test:coverage": "istanbul cover _mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/naxmefy/lorlen.git"
+  },
+  "keywords": [
+    "orm",
+    "sql"
+  ],
+  "author": {
+    "name": "MRW Neundorf [naxmefy]",
+    "email": "m.neundorf@live.de",
+    "url": "http://www.nax.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naxmefy/lorlen/issues"
+  },
+  "homepage": "https://github.com/naxmefy/lorlen#readme",
+  "engines": {
+    "node": ">= 6.9.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "commitizen": "2.8.6",
+    "conventional-changelog-lint": "1.1.0",
+    "conventional-changelog-lint-config-angular": "0.3.0",
+    "cz-customizable": "4.0.0",
+    "eslint": "3.11.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.4.0",
+    "eslint-plugin-standard": "2.0.1",
+    "husky": "0.11.9",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  }
+}
